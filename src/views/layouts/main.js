@@ -45,8 +45,11 @@ formEnvioMsjs.addEventListener("keydown", (evn) => {
                 price: priceForm.value,
                 img: thumbnail.value
             }
-
             socketClient.emit("envioProducto", nuevoProducto)
+
+            titleForm.value = ""
+            priceForm.value = ""
+            thumbnail.value = ""
         }
     }
 })
